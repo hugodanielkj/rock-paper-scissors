@@ -28,25 +28,28 @@ function winner(user_num, computer) {
     alert("The game was a draw");
   }
   else if (user_num == 0) {
-    if (computer == 1) 
+    if (computer == 1) {
       alert("Computer wins");
+    }
+    else {
+      alert("You win");
+    }
   }
-    else
-      alert("You win");
-
   if (user_num == 1) {
-    if (computer == 0)
+    if (computer == 0) {
       alert("You win");
-    else
-      alert("Computer wins")
+    }
+    else {
+      alert("Computer wins");
+    }
   }
 
   if (user_num == 2) {
-    if (computer == 0)
-      alert("Computer wins")
-    else
-      alert("You win")
+    if (computer == 0) {
+      alert("Computer wins");
+    }
+    else {
+      alert("You win");
+    }
   }
 }
-
-console.log(winner(getUserChoice(), getComputerChoice(0, 2)))
