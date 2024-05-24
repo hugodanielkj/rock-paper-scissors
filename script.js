@@ -30,10 +30,10 @@ function winner(user_num, computer) {
   else if (user_num == 0) {
     if (computer == 1) 
       alert("Computer wins");
-  }
     else
       alert("You win");
-
+  }
+    
   if (user_num == 1) {
     if (computer == 0)
       alert("You win");
@@ -49,4 +49,4 @@ function winner(user_num, computer) {
   }
 }
 
-console.log(winner(getUserChoice(), getComputerChoice(0, 2)))
+winner(getUserChoice(), getComputerChoice(0, 2))
