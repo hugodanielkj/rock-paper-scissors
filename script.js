@@ -12,6 +12,9 @@ function getComputerChoice(min, max) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
   let number = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+  //Console.log used to see the computer number on Console of Dev Tools of browser
+  console.log(number)
+
   return number;
   /*if (number == 0) {
     return "Rock";
@@ -53,3 +56,5 @@ function winner(user_num, computer) {
     }
   }
 }
+
+winner(getUserChoice(), getComputerChoice(0, 2))
