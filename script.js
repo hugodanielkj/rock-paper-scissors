@@ -23,32 +23,30 @@ function getComputerChoice(min, max) {
     return  "Scissors";*/
 }
 
-function winner(getUserChoice, getComputerChoice) {
-  if (getUserChoice == getComputerChoice) {
+function winner(user_num, computer) {
+  if (user_num == computer) {
     alert("The game was a draw");
   }
-  else if (getUserChoice == 0) {
-    if (getComputerChoice == 1) 
+  else if (user_num == 0) {
+    if (computer == 1) 
       alert("Computer wins");
   }
     else
       alert("You win");
 
-  if (getUserChoice == 1) {
-    if (getComputerChoice == 0)
+  if (user_num == 1) {
+    if (computer == 0)
       alert("You win");
     else
       alert("Computer wins")
   }
 
-  if (getUserChoice == 2) {
-    if (getComputerChoice == 0)
+  if (user_num == 2) {
+    if (computer == 0)
       alert("Computer wins")
     else
       alert("You win")
   }
 }
 
-console.log(getUserChoice())
-console.log(getComputerChoice(0, 2))
-console.log(winner())
+console.log(winner(getUserChoice(), getComputerChoice(0, 2)))
