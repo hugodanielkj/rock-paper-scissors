@@ -11,9 +11,11 @@ function getUserChoice() {
 function getComputerChoice(min, max) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
-  let number = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+  let number = Math.floor(
+    Math.random() * (maxFloored - minCeiled + 1) + minCeiled
+  );
   //Console.log used to see the computer number on Console of Dev Tools of browser
-  console.log(number)
+  console.log(number);
 
   return number;
   /*if (number == 0) {
@@ -29,20 +31,17 @@ function getComputerChoice(min, max) {
 function winner(user_num, computer) {
   if (user_num == computer) {
     alert("The game was a draw");
-  }
-  else if (user_num == 0) {
+  } else if (user_num == 0) {
     if (computer == 1) {
       alert("Computer wins");
-    }
-    else {
+    } else {
       alert("You win");
     }
   }
   if (user_num == 1) {
     if (computer == 0) {
       alert("You win");
-    }
-    else {
+    } else {
       alert("Computer wins");
     }
   }
@@ -50,11 +49,10 @@ function winner(user_num, computer) {
   if (user_num == 2) {
     if (computer == 0) {
       alert("Computer wins");
-    }
-    else {
+    } else {
       alert("You win");
     }
   }
 }
 
-winner(getUserChoice(), getComputerChoice(0, 2))
+winner(getUserChoice(), getComputerChoice(0, 2));
