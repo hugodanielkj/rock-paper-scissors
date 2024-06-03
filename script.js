@@ -1,58 +1,35 @@
-// User will choose rock, papper or scissors
-// User will click on a buttom
-// Alert will show computer's choose and show who won the game
+"use strict";
 
-function getUserChoice() {
-  let user = prompt("Type 0 to Rock, 1 to Papper, 2 to Scissors");
-  return user;
+document.querySelector(".btn").addEventListener("click", runGame);
+
+function displayGameResult(message) {
+  document.querySelector(".game-result").textContent = message;
 }
 
-//Function copied from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-function getComputerChoice(min, max) {
-  const minCeiled = Math.ceil(min);
-  const maxFloored = Math.floor(max);
-  let number = Math.floor(
-    Math.random() * (maxFloored - minCeiled + 1) + minCeiled
-  );
-  //Console.log used to see the computer number on Console of Dev Tools of browser
-  console.log(number);
+function runGame() {
+  const userNumber = Number(document.querySelector(".number-input").value);
+  let computerNumber = Math.floor(Math.random() * 3);
+  console.log(computerNumber);
 
-  return number;
-  /*if (number == 0) {
-    return "Rock";
-  }
-  else if (number == 1) {
-    return "Papper";
-  }
-  else
-    return  "Scissors";*/
-}
-
-function winner(user_num, computer) {
-  if (user_num == computer) {
-    alert("The game was a draw");
-  } else if (user_num == 0) {
-    if (computer == 1) {
-      alert("Computer wins");
+  if (userNumber === computerNumber) {
+    displayGameResult("This game was a draw!");
+  } else if (userNumber === 0) {
+    if (computerNumber === 1) {
+      displayGameResult("Computer wins!");
     } else {
-      alert("You win");
+      displayGameResult("You win!");
     }
-  }
-  if (user_num == 1) {
-    if (computer == 0) {
-      alert("You win");
+  } else if (userNumber === 1) {
+    if (computerNumber === 0) {
+      displayGameResult("You win!");
     } else {
-      alert("Computer wins");
+      displayGameResult("Computer wins!");
     }
-  }
-
-  if (user_num == 2) {
-    if (computer == 0) {
-      alert("Computer wins");
+  } else if (userNumber === 2) {
+    if (computerNumber === 0) {
+      displayGameResult("Computer wins!");
     } else {
-      alert("You win");
+      displayGameResult("You win!");
     }
   }
 }
-
-winner(getUserChoice(), getComputerChoice(0, 2));
