@@ -11,6 +11,9 @@ function runGame() {
   let computerNumber = Math.floor(Math.random() * 3);
   console.log(computerNumber);
 
+  document.querySelector('.computer-choice').textContent = 'Computer choose: ' + computerNumber;
+  document.querySelector('.number-input').value = '';
+
   if (userNumber === computerNumber) {
     displayGameResult("This game was a draw!");
   } else if (userNumber === 0) {
