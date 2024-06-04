@@ -7,9 +7,6 @@ let computerScore = 0;
 
 document.querySelector(".btn").addEventListener("click", runGame);
 
-document.querySelector(".userScoreValue").textContent = userScore;
-document.querySelector(".computerScoreValue").textContent = computerScore;
-
 function stringToNumber(input) {
   switch (input) {
     case "rock":
@@ -49,6 +46,7 @@ function runGame() {
   let computerNumber = Math.floor(Math.random() * 3);
   let computerChoose = numberToString(computerNumber);
 
+  //Game Logic
   if (userNumber === computerNumber) {
     displayGameResult("This game was a draw!");
   } else if (userNumber === 0) {
@@ -77,8 +75,11 @@ function runGame() {
     }
   }
 
+  //Computer choose appers in screen
   document.querySelector(".computer-choice").textContent =
     "Computer choose: " + computerChoose;
+
+  //New score established
   document.querySelector(".userScoreValue").textContent = userScore;
   document.querySelector(".computerScoreValue").textContent = computerScore;
 }
