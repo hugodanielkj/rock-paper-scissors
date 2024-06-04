@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,62 @@
 }
 
 body {
-  background-color: lightblue;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-top: 1rem;
-  margin-left: 1rem;
+  background-color: rgba(0, 0, 0, 0.792);
+  font-family: "Play";
+  font-size: 20px;
+  color: white;
 }
 
+header {
+  text-align: center;
+  height: 6rem;
+  padding-top: 10px;
+  background-color: rgb(15, 188, 15);
+}
+
+.rules {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.792);
+  padding: 2px 15px;
+  border-radius: 10px;
+}
+
+main {
+  margin: auto;
+  width: 30rem;
+  padding: 10px;
+  height: 42.5rem;
+  background-color: grey;
+}
+
+.container {
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 0.6rem;
+  margin-bottom: 1rem;
+  height: 30px;
+  width: 70px;
+
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 0px 5px;
+  height: 30px;
+}
+
+.score {
+  margin-top: 2rem;
+}
+
+.score > p {
+  display: inline;
+}
+
+.computerScore {
+  float: right;
+}

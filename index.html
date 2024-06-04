@@ -7,21 +7,25 @@
     <title>Rock Papper Scissors</title>
   </head>
   <body>
-    <h1>Rock Paper Scissors - The Game!</h1>
+    <header>
+      <h1>Rock Paper Scissors - The Game!</h1>
+      <p class="rules" >To play the game, just type rock, paper or scissors!</p>
+    </header>
 
-    <div class="container">
-      <p>Type rock, paper or scissors</p>
-      <input class="input" type="text">
-      <button class="btn">Run</button>
-      <p class="game-result">Here goes the result</p>
-      <p class="computer-choice"></p>
-    </div>
+    <main>
+      <div class="container">
+        <p>Type Here:</p>
+        <input class="input" type="text">
+        <button class="btn">Go</button>
+        <p class="game-result">Here goes the result</p>
+        <p class="computer-choice"></p>
+      </div>
+      <div class="score">
+        <p class="userScore" >Your Score: <span class="userScoreValue">0</span></p>
+        <p class="computerScore" >Computer Score: <span class="computerScoreValue">0</span></p>
+      </div>
+    </main>
 
-    <div class="score">
-      <p>Your Score: <span class="userScore">0</span></p>
-      <p>Computer Score: <span class="computerScore">0</span></p>
-    </div>
-
-    <script src="script2.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
